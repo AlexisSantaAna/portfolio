@@ -41,7 +41,7 @@ const Cards = () => {
                 {
                     proyectos.map((proyecto, index) => (
                         <div className='col g-5 d-flex justify-content-center align-items-center flex-column single-card'>
-                            <h4>{proyecto.nombre}</h4>
+                            <h4 className='card-title'>{proyecto.nombre}</h4>
                             <img src="./assets/gif2.gif" alt="gif" />
                             <div>
                                 <button className='btn btn-dark'>PROYECTO</button>
