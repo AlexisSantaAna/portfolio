@@ -5,7 +5,7 @@ import './styles.css'
 const Projects = () => {
   return (
     <>
-      <h2><b>Mis proyectos</b></h2>
+      <h2>MIS PROYECTOS</h2>
       <Cards />
     </>
   )
