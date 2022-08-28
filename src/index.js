@@ -1,4 +1,5 @@
-import "mdb-ui-kit/css/mdb.min.css";
+import 'mdb-ui-kit/js/mdb.min.js';
+import 'mdb-ui-kit/css/mdb.min.css';
 import App from "./App";
 import React from "react";
 import ReactDOM from "react-dom/client";

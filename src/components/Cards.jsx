@@ -1,40 +1,53 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Carousel from './Carousel'
+import Rodal from 'rodal'
+import 'rodal/lib/rodal.css';
 import './styles.css'
 
 const proyectos = [
     {
         nombre: "Gaming Store",
         url: "https://alexissantaana-gaming-store.netlify.app/",
-        info: "Gaming Store (e-commerce) realizado para Coderhouse en ReactJS, Bootstrap, Vanilla JS & Firebase. Bibliotecas: react-router-dom, react-helmet, react-hook-form, Atropos."
+        github: "https://github.com/AlexisSantaAna/gaming-store",
+        info: "Gaming Store (e-commerce) realizado para Coderhouse en ReactJS, Bootstrap, Vanilla JS & Firebase. Bibliotecas: react-router-dom, react-helmet, react-hook-form, Atropos.",
+        img: "assets/pics/gs"
     },
     {
         nombre: "Comic Store",
         url: "https://alexissantaana.github.io/comic-store/",
+        github: "https://github.com/AlexisSantaAna/comic-store",
         info: "Sitio web ficticio de carrito de compras basado en una tienda de cómics. Proyecto en HTML, CSS, Bootstrap, Vanilla JS (usando variables, bucles, condicionales, objetos, funciones, almacenamiento local, promesas, bibliotecas, etc.)"
     },
     {
-        nombre: "Comic Store",
-        url: "https://alexissantaana.github.io/comic-store/",
-        info: "Sitio web ficticio de carrito de compras basado en una tienda de cómics. Proyecto en HTML, CSS, Bootstrap, Vanilla JS (usando variables, bucles, condicionales, objetos, funciones, almacenamiento local, promesas, bibliotecas, etc.)"
+        nombre: "IDeArSe",
+        url: "https://idearse.netlify.app/",
+        github: "https://github.com/AlexisSantaAna/IDeArSe",
+        info: "Sitio web realizado para IDeArSe en HTML, CSS, Bootstrap, Vanilla JS. IDeArSe es una ONG de Guaymallén, Mendoza, Argentina, una escuela de artes y deportes con la colaboración de grupos de Boy Scouts de Mendoza."
     },
     {
-        nombre: "Comic Store",
-        url: "https://alexissantaana.github.io/comic-store/",
-        info: "Sitio web ficticio de carrito de compras basado en una tienda de cómics. Proyecto en HTML, CSS, Bootstrap, Vanilla JS (usando variables, bucles, condicionales, objetos, funciones, almacenamiento local, promesas, bibliotecas, etc.)"
+        nombre: "Cinelista",
+        url: "https://cinelista.com.ar/",
+        github: "https://github.com/AlexisSantaAna/cinelista",
+        info: "Guarda de forma sencilla aquellas películas que quieres ver y no tienes donde apuntarlas. Proyecto en HTML, CSS, Bootstrap y Vanilla JS."
     },
     {
-        nombre: "Comic Store",
-        url: "https://alexissantaana.github.io/comic-store/",
-        info: "Sitio web ficticio de carrito de compras basado en una tienda de cómics. Proyecto en HTML, CSS, Bootstrap, Vanilla JS (usando variables, bucles, condicionales, objetos, funciones, almacenamiento local, promesas, bibliotecas, etc.)"
+        nombre: "Cavas Don Alexis",
+        url: "https://alexissantaana.github.io/cavas-don-alexis/",
+        github: "https://github.com/AlexisSantaAna/cavas-don-alexis",
+        info: "Proyecto web de bodega realizado para Coderhouse en HTML, CSS, Bootstrap, Sass & Vanilla JS."
     },
     {
-        nombre: "Comic Store",
-        url: "https://alexissantaana.github.io/comic-store/",
-        info: "Sitio web ficticio de carrito de compras basado en una tienda de cómics. Proyecto en HTML, CSS, Bootstrap, Vanilla JS (usando variables, bucles, condicionales, objetos, funciones, almacenamiento local, promesas, bibliotecas, etc.)"
+        nombre: "Thanos Portfolio",
+        url: "https://alexissantaana.github.io/Thanos-Portfolio/",
+        github: "https://github.com/AlexisSantaAna/Thanos-Portfolio",
+        info: "Sitio web de portafolio ficticio basado en el personaje de Marvel 'Thanos'. Proyecto en HTML, CSS, Bootstrap y Vanilla JS"
     }
 ]
 
 const Cards = () => {
+    const [visible, setVisible] = useState(false);
+    const [rodal, setRodal] = useState()
+
     return (
         <>
             <div className='container row d-flex justify-content-center align-items-center'>
@@ -42,12 +55,16 @@ const Cards = () => {
                     proyectos.map((proyecto, index) => (
                         <div className='col g-5 d-flex justify-content-center align-items-center flex-column single-card'>
                             <h4 className='card-title'>{proyecto.nombre}</h4>
-                            <img src="./assets/gif2.gif" alt="gif" />
+                            <Carousel proyecto={proyecto} index={index} />
                             <div>
-                                <button className='btn btn-dark'>PROYECTO</button>
-                                <button className='btn btn-dark'>GITHUB</button>
-                                <button className='btn btn-dark'>INFO</button>
+                                <a href={proyecto.url} target="_blank"><button className='btn btn-dark'>WEB</button></a>
+                                <a href={proyecto.github} target="_blank"><button className='btn btn-dark'>GITHUB</button></a>
+                                <button onClick={() => { setVisible(true); setRodal(proyectos[index].info) }} className='btn btn-dark'>INFO</button>
                             </div>
+                            <Rodal visible={visible} onClose={() => setVisible(false)}>
+                                <p className='modal-title'>{rodal}</p>
+                                <button className='rodal-cancel-btn btn btn-dark' onClick={() => setVisible(false)}>Cerrar</button>
+                            </Rodal>
                         </div>
                     ))
                 }

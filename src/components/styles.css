@@ -30,7 +30,7 @@ h4 {
   color: var(--main-green);
   padding: 1rem;
   font-size: 2rem;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .icons i:hover {
   color: var(--main-darkgreen);
@@ -91,13 +91,19 @@ h4 {
   border-radius: 10px;
   max-width: 500px;
   background-color: #fff;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .single-card:hover {
   border-color: var(--main-blue);
 }
-.single-card img {
+.carousel {
   width: 420px;
+  height: 300px;
+}
+.carousel-item img {
+  width: 420px;
+  height: 300px;
+  object-fit: cover;
 }
 .single-card button {
   margin: 1rem 0.4rem 0 0.4rem;
@@ -111,13 +117,23 @@ h4 {
   background-color: var(--main-blue) !important;
   box-shadow: none;
 }
+.rodal-cancel-btn {
+  position: absolute;
+  bottom: 16px;
+  right: 10px;
+  padding: 4px 15px;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
 .card-title {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.4rem;
   letter-spacing: -1px;
 }
-
+.modal-title {
+  width: 92%;
+}
 /* contact */
 .form {
   width: 50%;
@@ -131,7 +147,7 @@ textarea {
   border-radius: 5px;
   padding: 0.2rem 0 0.2rem 0.4rem;
   font-size: 0.94rem;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 input:focus,
@@ -145,12 +161,12 @@ textarea:hover {
   border-color: var(--main-blue);
 }
 
-.preguntas span{
+.preguntas span {
   color: var(--main-blue);
 }
 
-form label{
-  padding: .2rem 0;
+form label {
+  padding: 0.2rem 0;
   margin-top: 1rem;
 }
 
