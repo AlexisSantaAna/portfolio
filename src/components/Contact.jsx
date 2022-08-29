@@ -18,7 +18,7 @@ const Contact = () => {
             <input type="name" placeholder="Ingrese su nombre" id='name' required></input>
           </div>
           <div className='col-6 d-flex flex-column'>
-            <label htmlFor='email'><b>Email</b></label>
+            <label htmlFor='email'><b>Emaail</b></label>
             <input type="email" placeholder="Ingrese su email" id='email' required></input>
           </div>
         </div>
