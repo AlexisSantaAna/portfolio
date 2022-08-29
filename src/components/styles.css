@@ -1,4 +1,4 @@
-:root {    
+:root {
   --main-black: #202020;
   --main-lightblack: #353839;
   --main-green: #ccff00;
@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 h1 {
   font-size: 3rem;
@@ -45,9 +45,7 @@ h4 {
   display: flex;
   flex-direction: column;
   margin: -40px auto 40px;
-  min-height: 80vh;
   position: relative;
-  width: 70%;
   z-index: 10;
 }
 .profile-picture {
@@ -65,7 +63,6 @@ h4 {
 .profile-text {
   padding: 4rem 0;
   font-size: 1.7rem;
-  width: 70%;
 }
 .container-icon {
   padding: 0 2rem;
@@ -116,14 +113,6 @@ h4 {
   background-color: var(--main-blue) !important;
   box-shadow: none;
 }
-.rodal-cancel-btn {
-  position: absolute;
-  bottom: 16px;
-  right: 10px;
-  padding: 4px 15px;
-  border-radius: 3px;
-  transition: all 0.2s;
-}
 .card-title {
   text-transform: uppercase;
   font-weight: 600;
@@ -134,10 +123,16 @@ h4 {
 .modal-title {
   width: 92%;
 }
+.carousel-control-next-icon {
+  color: var(--main-blue);
+}
+.carousel-control-prev-icon {
+  color: var(--main-blue);
+}
 
 /* contact */
 .form {
-  width: 50%;
+  width: 55%;
   margin: 1rem 0 3.5rem 0;
 }
 
@@ -173,6 +168,111 @@ form label {
 
 /* footer */
 .container-footer {
-  height: 20vh;
   background-color: var(--main-black);
+  padding-bottom: 28px;
+}
+.space {
+  width: 56px;
+}
+.text-footer {
+  font-size: 0.9rem;
+  color: rgb(113, 113, 113);
+  margin: 0;
+}
+
+/* media queries */
+@media (max-width: 1399px) {
+  .single-card {
+    padding: 1rem 0.5rem;
+    margin: 1rem;
+    max-width: 460px;
+  }
+  .carousel {
+    width: 420px;
+    height: 300px;
+  }
+  .carousel-item img {
+    height: 300px;
+  }
+  .form {
+    width: 70%;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    min-width: 90vw !important;
+  }
+  .form {
+    width: 80%;
+  }
+}
+@media (max-width: 575px) {
+  .container-main {
+    margin: 0;
+    border-radius: 20px;
+  }
+  .single-card {
+    padding: 1rem 0.5rem;
+    margin: 1rem;
+    min-width: 320px;
+  }
+  .carousel {
+    max-width: 300px;
+    height: 240px;
+  }
+  .carousel-item img {
+    height: 240px;
+    max-width: 400px;
+  }
+  .form {
+    width: 92%;
+  }
+  /* fonts mobile */
+  h1 {
+    font-size: 2.5rem;
+  }
+  h4 {
+    font-size: 1.4rem;
+  }
+  .icons i {
+    padding: 1rem;
+    font-size: 2rem;
+  }
+  .profile-picture {
+    width: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: -77px;
+  }
+  .profile-text {
+    padding: 3rem 0 2.5rem 0;
+    font-size: 1.4rem;
+  }
+  .container-icon {
+    padding: 0 2rem;
+    width: 100px;
+    height: 100px;
+  }
+  .container-icon p {
+    padding: 0.4rem 0;
+  }
+  .container-icon img {
+    border-radius: 10px;
+  }
+  .icons i {
+    padding: 0.8rem;
+    font-size: 1.6rem;
+  }
+  .card-title {
+    font-size: 1.2rem;
+  }
+  .space {
+    width: 44.8px;
+  }
+  body {
+    background-color: var(--main-black);
+  }
+  form label {
+    font-size: .92rem;
+  }
 }

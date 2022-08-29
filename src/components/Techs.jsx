@@ -8,7 +8,7 @@ const Techs = () => {
             {
                 techs.map((tech, index) => (
                     <>
-                    <div className='text-center container-icon'>
+                    <div className='container-icon d-flex flex-column justify-content-center align-items-center'>
                         <img src={`./assets/ic${index + 1}.png`} className='icon' alt={tech} />
                         <p>{tech}</p>
                     </div>

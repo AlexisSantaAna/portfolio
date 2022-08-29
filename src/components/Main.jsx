@@ -7,7 +7,7 @@ import React from 'react'
 
 const Main = () => {
     return (
-        <main className='container-main d-flex flex-column'>
+        <main className='container container-main d-flex flex-column'>
             <Profile />
             <Projects />
             <Contact />

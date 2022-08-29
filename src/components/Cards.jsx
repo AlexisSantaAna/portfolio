@@ -66,10 +66,10 @@ const Cards = () => {
             }
         })
     }
-    
+
     return (
         <>
-            <div className='container row d-flex justify-content-center align-items-center'>
+            <div className='container row d-flex justify-content-center align-items-center pb-5'>
                 {
                     proyectos.map((proyecto, index) => (
                         <div className='col g-5 d-flex justify-content-center align-items-center flex-column single-card'>
