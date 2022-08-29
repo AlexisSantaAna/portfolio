@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Carousel from './Carousel'
-import Rodal from 'rodal'
-import 'rodal/lib/rodal.css';
 import './styles.css'
 
 const proyectos = [
@@ -66,10 +64,6 @@ const Cards = () => {
                                 <a href={proyecto.github} target="_blank"><button className='btn btn-dark'>GITHUB</button></a>
                                 <button onClick={() => { setVisible(true); setRodal(proyectos[index].info) }} className='btn btn-dark'>INFO</button>
                             </div>
-                            <Rodal visible={visible} onClose={() => setVisible(false)}>
-                                <p className='modal-title'>{rodal}</p>
-                                <button className='rodal-cancel-btn btn btn-dark' onClick={() => setVisible(false)}>Cerrar</button>
-                            </Rodal>
                         </div>
                     ))
                 }
