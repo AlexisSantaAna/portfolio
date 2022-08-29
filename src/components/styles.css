@@ -1,4 +1,4 @@
-:root {
+:root {    
   --main-black: #202020;
   --main-lightblack: #353839;
   --main-green: #ccff00;
@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: "Raleway";
+  font-family: 'Raleway', sans-serif;
 }
 h1 {
   font-size: 3rem;
@@ -134,6 +134,7 @@ h4 {
 .modal-title {
   width: 92%;
 }
+
 /* contact */
 .form {
   width: 50%;

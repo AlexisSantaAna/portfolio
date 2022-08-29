@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Carousel from './Carousel'
 import './styles.css'
+import Swal from 'sweetalert2'
+import 'animate.css';
 
 const proyectos = [
     {
@@ -48,9 +50,23 @@ const proyectos = [
 ]
 
 const Cards = () => {
-    const [visible, setVisible] = useState(false);
-    const [rodal, setRodal] = useState()
 
+    const handleInfo = (info, nombre) => {
+        Swal.fire({
+            title: nombre,
+            text: info,
+            icon: 'info',
+            confirmButtonText: 'CERRAR',
+            confirmButtonColor: "#353839",
+            iconColor: "#4da4ea",
+            showClass: {
+                popup: "animate__faster animate__animated animate__zoomIn",
+                backdrop: 'swal2-backdrop-show',
+                icon: 'swal2-icon-show'
+            }
+        })
+    }
+    
     return (
         <>
             <div className='container row d-flex justify-content-center align-items-center'>
@@ -62,7 +78,7 @@ const Cards = () => {
                             <div>
                                 <a href={proyecto.url} target="_blank"><button className='btn btn-dark'>WEB</button></a>
                                 <a href={proyecto.github} target="_blank"><button className='btn btn-dark'>GITHUB</button></a>
-                                <button onClick={() => { setVisible(true); setRodal(proyectos[index].info) }} className='btn btn-dark'>INFO</button>
+                                <button className='btn btn-dark info' onClick={() => handleInfo(proyecto.info, proyecto.nombre)}>INFO</button>
                             </div>
                         </div>
                     ))

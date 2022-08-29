@@ -1,11 +1,35 @@
 import React from 'react'
 import './styles.css'
+import Swal from 'sweetalert2'
+import 'animate.css';
 
 const Contact = () => {
+
+  const notification = () => {
+    Swal.fire({
+      toast: true,
+      position: "bottom-end",
+      icon: "success",
+      iconColor: "#4da4ea",
+      title: `Mensaje enviado con éxito!`,
+      showConfirmButton: false,
+      timer: 4000,
+      showClass: {
+        popup: 'animate__animated animate__fadeInUp'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutDown'
+      }
+    });
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
+    notification()
     e.target.reset()
   }
+
+
 
   return (
     <>
@@ -25,7 +49,7 @@ const Contact = () => {
         <div className='row'>
           <div className='col-12 d-flex flex-column'>
             <label htmlFor="msg"><b>Mensaje</b></label>
-            <textarea id='msg' placeholder='Escriba su mensaje' style={{resize: "none"}} rows="8" cols="20" required/>
+            <textarea id='msg' placeholder='Escriba su mensaje' style={{ resize: "none" }} rows="8" cols="20" required />
           </div>
         </div>
         <button type='submit' className='btn btn-dark my-2 w-100'>Enviar!</button>
