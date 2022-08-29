@@ -31,7 +31,7 @@ const Carousel = ({proyecto, index}) => {
                 </div>
 
                 {/* <!-- Inner --> */}
-                <div className="carousel-inner">
+                <div className="carousel-inner rounded-5 shadow-5">
                     {/* <!-- Single item --> */}
                     <div className="carousel-item active" >
                         <img src={proyecto.img+"1.jpg"} className="d-block w-100" alt="portfolio img 1" />

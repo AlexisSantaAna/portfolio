@@ -16,31 +16,36 @@ const proyectos = [
         nombre: "Comic Store",
         url: "https://alexissantaana.github.io/comic-store/",
         github: "https://github.com/AlexisSantaAna/comic-store",
-        info: "Sitio web ficticio de carrito de compras basado en una tienda de cómics. Proyecto en HTML, CSS, Bootstrap, Vanilla JS (usando variables, bucles, condicionales, objetos, funciones, almacenamiento local, promesas, bibliotecas, etc.)"
+        info: "Sitio web ficticio de carrito de compras basado en una tienda de cómics. Proyecto en HTML, CSS, Bootstrap, Vanilla JS (usando variables, bucles, condicionales, objetos, funciones, almacenamiento local, promesas, bibliotecas, etc.)",
+        img: "assets/pics/cs"
     },
     {
         nombre: "IDeArSe",
         url: "https://idearse.netlify.app/",
         github: "https://github.com/AlexisSantaAna/IDeArSe",
-        info: "Sitio web realizado para IDeArSe en HTML, CSS, Bootstrap, Vanilla JS. IDeArSe es una ONG de Guaymallén, Mendoza, Argentina, una escuela de artes y deportes con la colaboración de grupos de Boy Scouts de Mendoza."
+        info: "Sitio web realizado para IDeArSe en HTML, CSS, Bootstrap, Vanilla JS. IDeArSe es una ONG de Guaymallén, Mendoza, Argentina, una escuela de artes y deportes con la colaboración de grupos de Boy Scouts de Mendoza.",
+        img: "assets/pics/ide"
     },
     {
         nombre: "Cinelista",
         url: "https://cinelista.com.ar/",
         github: "https://github.com/AlexisSantaAna/cinelista",
-        info: "Guarda de forma sencilla aquellas películas que quieres ver y no tienes donde apuntarlas. Proyecto en HTML, CSS, Bootstrap y Vanilla JS."
+        info: "Guarda de forma sencilla aquellas películas que quieres ver y no tienes donde apuntarlas. Proyecto en HTML, CSS, Bootstrap y Vanilla JS.",
+        img: "assets/pics/cl"
     },
     {
         nombre: "Cavas Don Alexis",
         url: "https://alexissantaana.github.io/cavas-don-alexis/",
         github: "https://github.com/AlexisSantaAna/cavas-don-alexis",
-        info: "Proyecto web de bodega realizado para Coderhouse en HTML, CSS, Bootstrap, Sass & Vanilla JS."
+        info: "Proyecto web de bodega realizado para Coderhouse en HTML, CSS, Bootstrap, Sass & Vanilla JS.",
+        img: "assets/pics/cda"
     },
     {
         nombre: "Thanos Portfolio",
         url: "https://alexissantaana.github.io/Thanos-Portfolio/",
         github: "https://github.com/AlexisSantaAna/Thanos-Portfolio",
-        info: "Sitio web de portafolio ficticio basado en el personaje de Marvel 'Thanos'. Proyecto en HTML, CSS, Bootstrap y Vanilla JS"
+        info: "Sitio web de portafolio ficticio basado en el personaje de Marvel 'Thanos'. Proyecto en HTML, CSS, Bootstrap y Vanilla JS",
+        img: "assets/pics/tp"
     }
 ]
 
