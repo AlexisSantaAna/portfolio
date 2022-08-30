@@ -61,11 +61,11 @@ const Contact = () => {
         <div className="row">
           {/* message */}
           <div className="col-12 d-flex flex-column">
-            <label htmlFor="msg"><b>Mensaje</b></label>
-            <textarea name="msg" id="msg" placeholder="Escriba su mensaje" style={{ resize: "none" }} rows="8" cols="20" required />
+            <label htmlFor="message"><b>Mensaje</b></label>
+            <textarea name="message" id="message" placeholder="Escriba su mensaje" style={{ resize: "none" }} rows="8" cols="20" required />
           </div>
         </div>
-        <button type="submit" className="btn btn-dark my-2 w-100">Enviar!</button>
+        <input type="submit" className="my-2 w-100" value="Enviar!" />
       </form>
     </>
   )

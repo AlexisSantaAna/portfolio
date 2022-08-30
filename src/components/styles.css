@@ -136,8 +136,9 @@ h4 {
   margin: 1rem 0 3.5rem 0;
 }
 
-input,
-textarea {
+#name,
+textarea,
+#email {
   border: 1px solid hsla(0, 0%, 50%, 0.763);
   border-bottom: 3px solid hsla(0, 0%, 49%, 0.779);
   border-radius: 5px;
@@ -146,13 +147,15 @@ textarea {
   transition: all 0.4s ease-in-out;
 }
 
-input:focus,
+#name:focus,
+#email:focus,
 textarea:focus {
   outline: none !important;
   border-color: var(--main-blue);
 }
 
-input:hover,
+#name:hover,
+#email:hover,
 textarea:hover {
   border-color: var(--main-blue);
 }

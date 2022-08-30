@@ -35,19 +35,9 @@
 
 <body>
   <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-    <div className="row">
-      <div className="col-12 col-sm-6 d-flex flex-column">
-        <input name="name" type="text" placeholder="Ingrese su nombre" id="name" required></input>
-      </div>
-      <div className="col-12 col-sm-6 d-flex flex-column">
-        <input name="email" type="email" placeholder="Ingrese su email" id="email" required></input>
-      </div>
-    </div>
-    <div className="row">
-      <div className="col-12 d-flex flex-column">
-        <textarea name="msg" id="msg" placeholder="Escriba su mensaje" rows="8" cols="20" required>
-      </div>
-    </div>
+    <input name="name" type="text">
+    <input name="email" type="email">
+    <textarea name="message"></textarea>
   </form>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
