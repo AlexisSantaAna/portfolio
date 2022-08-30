@@ -45,21 +45,26 @@ const Contact = () => {
       <h2 className='pt-5' data-aos="fade-right" data-aos-duration="800">CONTACTO</h2>
       <div className='bar' data-aos="fade-left" data-aos-duration="800"></div>
       <h5 className='py-1 preguntas text-center' data-aos="fade-up" data-aos-duration="800"><i>¿Alguna pregunta o querés que <span>trabajemos juntos?</span></i></h5>
-      <form className='form' onSubmit={e => handleSubmit(e)} data-aos="fade-up" data-aos-duration="800">
+      <form name='contact v1' method='post' netlify className='form' onSubmit={e => handleSubmit(e)} data-aos="fade-up" data-aos-duration="800">
         <div className='row'>
+          {/* hidden input */}
+          <input type="hidden" name="form-name" value="contact v1"></input>
+          {/* name */}
           <div className='col-12 col-sm-6 d-flex flex-column'>
             <label htmlFor='name'><b>Nombre completo</b></label>
-            <input type="name" placeholder="Ingrese su nombre" id='name' required></input>
+            <input name='name' type="name" placeholder="Ingrese su nombre" id='name' required></input>
           </div>
+          {/* email */}
           <div className='col-12 col-sm-6 d-flex flex-column'>
             <label htmlFor='email'><b>Email</b></label>
-            <input type="email" placeholder="Ingrese su email" id='email' required></input>
+            <input name="email" type="email" placeholder="Ingrese su email" id='email' required></input>
           </div>
         </div>
         <div className='row'>
+          {/* message */}
           <div className='col-12 d-flex flex-column'>
             <label htmlFor="msg"><b>Mensaje</b></label>
-            <textarea id='msg' placeholder='Escriba su mensaje' style={{ resize: "none" }} rows="8" cols="20" required />
+            <textarea name='msg' id='msg' placeholder='Escriba su mensaje' style={{ resize: "none" }} rows="8" cols="20" required />
           </div>
         </div>
         <button type='submit' className='btn btn-dark my-2 w-100'>Enviar!</button>
