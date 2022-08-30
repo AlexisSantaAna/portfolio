@@ -2,8 +2,11 @@ import React, { useEffect } from 'react'
 import Carousel from './Carousel'
 import './styles.css'
 import Swal from 'sweetalert2'
-import 'animate.css';
+import 'animate.css'
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
+// Data Base
 const proyectos = [
     {
         nombre: "Gaming Store",
@@ -51,7 +54,14 @@ const proyectos = [
 
 const Cards = () => {
 
+    //AOS library
+    useEffect(() => {
+        AOS.init({ once: true });
+        AOS.refresh();
+    }, []);
+
     const handleInfo = (info, nombre) => {
+        //Sweet Alert 2 library
         Swal.fire({
             title: nombre,
             text: info,
@@ -72,7 +82,7 @@ const Cards = () => {
             <div className='container row d-flex justify-content-center align-items-center pb-5'>
                 {
                     proyectos.map((proyecto, index) => (
-                        <div className='col g-5 d-flex justify-content-center align-items-center flex-column single-card'>
+                        <div className='col g-5 d-flex justify-content-center align-items-center flex-column single-card' data-aos="fade-up" data-aos-duration="800">
                             <h4 className='card-title'>{proyecto.nombre}</h4>
                             <Carousel proyecto={proyecto} index={index} />
                             <div>

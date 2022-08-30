@@ -61,7 +61,7 @@ h4 {
   color: var(--main-blue);
 }
 .profile-text {
-  padding: 4rem 0;
+  padding: 4rem 0 7rem 0;
   font-size: 1.7rem;
 }
 .container-icon {
@@ -157,6 +157,10 @@ textarea:hover {
   border-color: var(--main-blue);
 }
 
+.preguntas {
+  margin-bottom: 0;
+}
+
 .preguntas span {
   color: var(--main-blue);
 }
@@ -164,6 +168,11 @@ textarea:hover {
 form label {
   padding: 0.2rem 0;
   margin-top: 1rem;
+}
+.bar {
+  width: 5rem;
+  border-bottom: 4px solid #4f4f4f;
+  margin-bottom: 2rem;
 }
 
 /* footer */
@@ -245,7 +254,7 @@ form label {
     top: -77px;
   }
   .profile-text {
-    padding: 3rem 0 2.5rem 0;
+    padding: 3rem 0 5rem 0;
     font-size: 1.4rem;
   }
   .container-icon {
@@ -255,9 +264,7 @@ form label {
   }
   .container-icon p {
     padding: 0.4rem 0;
-  }
-  .container-icon img {
-    border-radius: 10px;
+    font-size: .9rem;
   }
   .icons i {
     padding: 0.8rem;
@@ -274,5 +281,6 @@ form label {
   }
   form label {
     font-size: .92rem;
+    margin-top: .8rem;
   }
 }

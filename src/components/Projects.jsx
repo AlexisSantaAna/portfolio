@@ -5,7 +5,8 @@ import './styles.css'
 const Projects = () => {
   return (
     <>
-      <h2>MIS PROYECTOS</h2>
+      <h2 data-aos="fade-right"  data-aos-duration="800">MIS PROYECTOS</h2>
+      <div className='bar' data-aos="fade-left" data-aos-duration="800"></div>
       <Cards />
     </>
   )

@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './styles.css'
 import Swal from 'sweetalert2'
 import 'animate.css';
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 const Contact = () => {
 
+  //AOS library
+  useEffect(() => {
+    AOS.init({ once: true });
+    AOS.refresh();
+  }, []);
+
   const notification = () => {
+    //Sweet Alert 2 library
     Swal.fire({
       toast: true,
       position: "bottom-end",
@@ -33,15 +42,16 @@ const Contact = () => {
 
   return (
     <>
-      <h2 className='pt-5'>CONTACTO</h2>
+      <h2 className='pt-5' data-aos="fade-right" data-aos-duration="800">CONTACTO</h2>
+      <div className='bar' data-aos="fade-left" data-aos-duration="800"></div>
       <h5 className='py-1 preguntas text-center'><i>¿Alguna pregunta o querés que <span>trabajemos juntos?</span></i></h5>
-      <form className='form' onSubmit={e => handleSubmit(e)}>
+      <form className='form' onSubmit={e => handleSubmit(e)} data-aos="fade-up" data-aos-duration="800">
         <div className='row'>
-          <div className='col-6 d-flex flex-column'>
+          <div className='col-12 col-sm-6 d-flex flex-column'>
             <label htmlFor='name'><b>Nombre completo</b></label>
             <input type="name" placeholder="Ingrese su nombre" id='name' required></input>
           </div>
-          <div className='col-6 d-flex flex-column'>
+          <div className='col-12 col-sm-6 d-flex flex-column'>
             <label htmlFor='email'><b>Email</b></label>
             <input type="email" placeholder="Ingrese su email" id='email' required></input>
           </div>
