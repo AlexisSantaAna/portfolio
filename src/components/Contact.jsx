@@ -32,19 +32,17 @@ const Contact = () => {
     });
   }
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-  //   notification()
-  //   e.target.reset()
-  // }
-  // {e => handleSubmit(e)}
+  const handleSubmit = (e) => {
+    notification()
+    e.target.reset()
+  }
 
   return (
     <>
       <h2 className="pt-5" data-aos="fade-right" data-aos-duration="800">CONTACTO</h2>
       <div className="bar" data-aos="fade-left" data-aos-duration="800"></div>
       <h5 className="py-1 preguntas text-center" data-aos="fade-up" data-aos-duration="800"><i>¿Alguna pregunta o querés que <span>trabajemos juntos?</span></i></h5>
-      <form name="contact" method="POST" data-netlify="true" className="form" onSubmit="submit" data-aos="fade-up" data-aos-duration="800">
+      <form name="contact" method="POST" data-netlify="true" className="form" onSubmit={e => handleSubmit(e)} data-aos="fade-up" data-aos-duration="800">
         <div className="row">
           {/* hidden input */}
           <input type="hidden" name="form-name" value="contact" />
@@ -62,11 +60,11 @@ const Contact = () => {
         <div className="row">
           {/* message */}
           <div className="col-12 d-flex flex-column">
-            <label htmlFor="message"><b>Mensaje</b></label>
-            <textarea name="message" id="message" placeholder="Escriba su mensaje" style={{ resize: "none" }} rows="8" cols="20" required />
+            <label htmlFor="msg"><b>Mensaje</b></label>
+            <textarea name="msg" id="msg" placeholder="Escriba su mensaje" style={{ resize: "none" }} rows="8" cols="20" required />
           </div>
         </div>
-        <input type="submit" className="my-2 w-100" value="Enviar!" />
+        <button type="submit" className="btn btn-dark my-2 w-100">Enviar!</button>
       </form>
     </>
   )
