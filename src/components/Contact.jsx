@@ -44,40 +44,37 @@ const Contact = () => {
       <div className="bar" data-aos="fade-left" data-aos-duration="800"></div>
       <h5 className="py-1 preguntas text-center" data-aos="fade-up" data-aos-duration="800"><i>¿Alguna pregunta o querés que <span>trabajemos juntos?</span></i></h5>
       <form name="contact" method="POST" data-netlify="true" className="form" onSubmit={e => handleSubmit(e)} data-aos="fade-up" data-aos-duration="800">
+        <form name="contact2" netlify>
+          <p>
+            <label>Name <input type="text" name="name" /></label>
+          </p>
+          <p>
+            <label>Email <input type="email" name="email" /></label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
         <div className="row">
-          <p>
-            {/* hidden input */}
-            {/* <input type="hidden" name="form-name" value="contact"></input> */}
-            {/* name */}
-            <div className="col-12 col-sm-6 d-flex flex-column">
-              <label htmlFor="name"><b>Nombre completo</b></label>
-              <input name="name" type="text" placeholder="Ingrese su nombre" id="name" required></input>
-            </div>
-          </p>
-          <p>
-            {/* email */}
-            <div className="col-12 col-sm-6 d-flex flex-column">
-              <label htmlFor="email"><b>Email</b></label>
-              <input name="email" type="email" placeholder="Ingrese su email" id="email" required></input>
-            </div>
-          </p>
-
-
+          {/* name */}
+          <div className="col-12 col-sm-6 d-flex flex-column">
+            <label htmlFor="name"><b>Nombre completo</b></label>
+            <input name="name" type="text" placeholder="Ingrese su nombre" id="name" required></input>
+          </div>
+          {/* email */}
+          <div className="col-12 col-sm-6 d-flex flex-column">
+            <label htmlFor="email"><b>Email</b></label>
+            <input name="email" type="email" placeholder="Ingrese su email" id="email" required></input>
+          </div>
         </div>
         <div className="row">
-          <p>
-            {/* message */}
-            <div className="col-12 d-flex flex-column">
-              <label htmlFor="msg"><b>Mensaje</b></label>
-              <textarea name="msg" id="msg" placeholder="Escriba su mensaje" style={{ resize: "none" }} rows="8" cols="20" required />
-            </div>
-          </p>
-          <p>
-            <button type="submit" className="btn btn-dark my-2 w-100">Enviar!</button>
-          </p>
-
+          {/* message */}
+          <div className="col-12 d-flex flex-column">
+            <label htmlFor="msg"><b>Mensaje</b></label>
+            <textarea name="msg" id="msg" placeholder="Escriba su mensaje" style={{ resize: "none" }} rows="8" cols="20" required />
+          </div>
         </div>
-
+        <button type="submit" className="btn btn-dark my-2 w-100">Enviar!</button>
       </form>
     </>
   )
