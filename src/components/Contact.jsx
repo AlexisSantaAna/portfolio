@@ -49,12 +49,12 @@ const Contact = () => {
           {/* name */}
           <div className="col-12 col-sm-6 d-flex flex-column">
             <label htmlFor="name"><b>Nombre completo</b></label>
-            <input name="name" type="text" placeholder="Ingrese su nombre" id="name" required></input>
+            <input name="name" type="text" placeholder="Ingrese su nombre" id="name" required />
           </div>
           {/* email */}
           <div className="col-12 col-sm-6 d-flex flex-column">
             <label htmlFor="email"><b>Email</b></label>
-            <input name="email" type="email" placeholder="Ingrese su email" id="email" required></input>
+            <input name="email" type="email" placeholder="Ingrese su email" id="email" required />
           </div>
         </div>
         <div className="row">
