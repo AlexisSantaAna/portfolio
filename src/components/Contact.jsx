@@ -32,18 +32,19 @@ const Contact = () => {
     });
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    notification()
-    e.target.reset()
-  }
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+  //   notification()
+  //   e.target.reset()
+  // }
+  // {e => handleSubmit(e)}
 
   return (
     <>
       <h2 className="pt-5" data-aos="fade-right" data-aos-duration="800">CONTACTO</h2>
       <div className="bar" data-aos="fade-left" data-aos-duration="800"></div>
       <h5 className="py-1 preguntas text-center" data-aos="fade-up" data-aos-duration="800"><i>¿Alguna pregunta o querés que <span>trabajemos juntos?</span></i></h5>
-      <form name="contact" method="POST" data-netlify="true" className="form" onSubmit={e => handleSubmit(e)} data-aos="fade-up" data-aos-duration="800">
+      <form name="contact" method="POST" data-netlify="true" className="form" onSubmit="submit" data-aos="fade-up" data-aos-duration="800">
         <div className="row">
           {/* hidden input */}
           <input type="hidden" name="form-name" value="contact" />
