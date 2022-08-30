@@ -34,7 +34,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     notification()
-    e.target.reset()
+    // e.target.reset()
   }
 
   return (
