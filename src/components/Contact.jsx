@@ -44,7 +44,7 @@ const Contact = () => {
     <>
       <h2 className='pt-5' data-aos="fade-right" data-aos-duration="800">CONTACTO</h2>
       <div className='bar' data-aos="fade-left" data-aos-duration="800"></div>
-      <h5 className='py-1 preguntas text-center'><i>¿Alguna pregunta o querés que <span>trabajemos juntos?</span></i></h5>
+      <h5 className='py-1 preguntas text-center' data-aos="fade-up" data-aos-duration="800"><i>¿Alguna pregunta o querés que <span>trabajemos juntos?</span></i></h5>
       <form className='form' onSubmit={e => handleSubmit(e)} data-aos="fade-up" data-aos-duration="800">
         <div className='row'>
           <div className='col-12 col-sm-6 d-flex flex-column'>
