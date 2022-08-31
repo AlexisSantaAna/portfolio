@@ -6,8 +6,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Contact = () => {
-  const [hasSubmited, setHasSubmited] = useState(false)
-
   //AOS library
   useEffect(() => {
     AOS.init({ once: true });
@@ -15,7 +13,7 @@ const Contact = () => {
   }, []); 
 
   useEffect(() => {
-    if (sessionStorage.getItem("submited") == true) {
+    if (sessionStorage.getItem("submited")) {
       //Sweet Alert 2 library
       Swal.fire({
         toast: true,
@@ -32,14 +30,12 @@ const Contact = () => {
           popup: "animate__animated animate__fadeOutDown"
         }
       });
-      setHasSubmited(false)
-      sessionStorage.setItem("submited", hasSubmited)
+      sessionStorage.removeItem("submited")
     }
   }, [])
 
-  const handleSubmit = () => {    
-    setHasSubmited(true)
-    sessionStorage.setItem("submited", hasSubmited)
+  const handleSubmit = () => {   
+    sessionStorage.setItem("submited", true)
   }
 
   return (
