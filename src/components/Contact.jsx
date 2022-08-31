@@ -15,7 +15,7 @@ const Contact = () => {
   }, []); 
 
   useEffect(() => {
-    if (sessionStorage.getItem("submited")) {
+    if (sessionStorage.getItem("submited") == true) {
       //Sweet Alert 2 library
       Swal.fire({
         toast: true,
