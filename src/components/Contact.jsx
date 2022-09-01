@@ -65,7 +65,7 @@ const Contact = () => {
             <textarea name="msg" id="msg" placeholder="Escriba su mensaje" style={{ resize: "none" }} rows="8" cols="20" required />
           </div>
         </div>
-        <button type="submit" className="btn btn-dark my-2 w-100">Enviar!</button>
+        <button type="submit" className="send-btn btn btn-dark my-2 w-100">Enviar!</button>
       </form>
     </>
   )

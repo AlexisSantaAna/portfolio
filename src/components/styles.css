@@ -1,6 +1,7 @@
 :root {
   --main-black: #202020;
   --main-lightblack: #353839;
+  --main-darkblack: #010203;
   --main-green: #ccff00;
   --main-darkgreen: #92b601;
   --main-blue: #4da4ea;
@@ -34,6 +35,14 @@ h4 {
 }
 .icons i:hover {
   color: var(--main-darkgreen);
+}
+.switch {
+  display: flex;
+  width: 100vw;
+  justify-content: start;
+}
+#dark .react-switch-bg {
+  background: var(--main-darkgreen) !important;
 }
 
 /* main */
@@ -192,6 +201,69 @@ form label {
   margin: 0;
 }
 
+/* light and dark modes */
+#dark .container-main {
+  background-color: var(--main-darkblack);
+}
+#dark h1 span,
+#dark h2 {
+  color: var(--main-green);
+}
+body #dark {
+  background-color: var(--main-lightblack);
+  color: var(--main-white);
+}
+#dark .bar {
+  border-bottom: 4px solid var(--main-white);
+}
+#dark .single-card {
+  background-color: var(--main-lightblack);
+  border: 1px solid var(--main-darkblack);
+  border-bottom: 5px solid var(--main-darkblack);
+
+  transition: all 0.4s ease-in-out;
+}
+#dark .single-card:hover {
+  border-color: var(--main-green);
+}
+#dark .carousel-control-next-icon {
+  color: var(--main-black);
+}
+#dark .carousel-control-prev-icon {
+  color: var(--main-black);
+}
+#dark .btn-dark {
+  background-color: var(--main-darkblack) !important;
+}
+#dark .btn-dark:hover {
+  background-color: var(--main-darkgreen) !important;
+}
+#dark .send-btn {
+  background-color: var(--main-lightblack) !important;
+}
+#dark .send-btn:hover {
+  background-color: var(--main-blue) !important;
+}
+#dark #name,
+#dark textarea,
+#dark #email {
+  border: 1px solid var(--main-darkblack);
+  border-bottom: 3px solid var(--main-darkblack);
+  transition: all 0.4s ease-in-out;
+}
+
+#dark #name:focus,
+#dark #email:focus,
+#dark textarea:focus {
+  border-color: var(--main-blue);
+}
+
+#dark #name:hover,
+#dark #email:hover,
+#dark textarea:hover {
+  border-color: var(--main-blue);
+}
+
 /* media queries */
 @media (max-width: 1399px) {
   .single-card {
@@ -267,7 +339,7 @@ form label {
   }
   .container-icon p {
     padding: 0.4rem 0;
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
   .icons i {
     padding: 0.8rem;
@@ -282,8 +354,11 @@ form label {
   body {
     background-color: var(--main-black);
   }
+  body #dark {
+    background-color: var(--main-black);
+  }
   form label {
-    font-size: .92rem;
-    margin-top: .8rem;
+    font-size: 0.92rem;
+    margin-top: 0.8rem;
   }
 }
