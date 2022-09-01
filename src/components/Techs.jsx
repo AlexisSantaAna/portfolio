@@ -7,12 +7,10 @@ const Techs = () => {
         <>
             {
                 techs.map((tech, index) => (
-                    <>
-                    <div className='container-icon d-flex flex-column justify-content-center align-items-center'>
+                    <div key={index + 1000} className='container-icon d-flex flex-column justify-content-center align-items-center'>
                         <img src={`./assets/ic${index + 1}.png`} className='icon' alt={tech} />
                         <p>{tech}</p>
                     </div>
-                    </>
                 ))}
 
         </>

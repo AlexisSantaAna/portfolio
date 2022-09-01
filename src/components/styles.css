@@ -201,7 +201,7 @@ form label {
   margin: 0;
 }
 
-/* light and dark modes */
+/* dark mode */
 #dark .container-main {
   background-color: var(--main-darkblack);
 }
@@ -220,8 +220,6 @@ body #dark {
   background-color: var(--main-lightblack);
   border: 1px solid var(--main-darkblack);
   border-bottom: 5px solid var(--main-darkblack);
-
-  transition: all 0.4s ease-in-out;
 }
 #dark .single-card:hover {
   border-color: var(--main-green);

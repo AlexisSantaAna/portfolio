@@ -82,7 +82,7 @@ const Cards = () => {
             <div className='container row d-flex justify-content-center align-items-center pb-5'>
                 {
                     proyectos.map((proyecto, index) => (
-                        <div className='col g-5 d-flex justify-content-center align-items-center flex-column single-card' data-aos="fade-up" data-aos-duration="800">
+                        <div key={index} className='col g-5 d-flex justify-content-center align-items-center flex-column single-card' data-aos="fade-up" data-aos-duration="800">
                             <h4 className='card-title'>{proyecto.nombre}</h4>
                             <Carousel proyecto={proyecto} index={index} />
                             <div>
