@@ -9,6 +9,13 @@ import "aos/dist/aos.css";
 // Data Base
 const proyectos = [
     {
+        nombre: "Star App",
+        url: "https://drive.google.com/file/d/1M4WeoZYm4MeLzahpzfU3GH86gBdlLSXE/view",
+        github: "https://github.com/AlexisSantaAna/star-wars-characters",
+        info: "Star App es un proyecto realizado para Coderhouse en React Native, Expo, Firebase, Redux, SQLite, API Rest. El despliegue fue realizado para Android, incluyo el instalador para su prueba y ejecución.",
+        img: "assets/pics/sa"
+    },
+    {
         nombre: "Gaming Store",
         url: "https://alexissantaana-gaming-store.netlify.app/",
         github: "https://github.com/AlexisSantaAna/gaming-store",
