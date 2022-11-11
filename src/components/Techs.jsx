@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Techs = () => {
-    const techs = ["HTML", "CSS", "Bootstrap", "Javascript", "React.js", "React Native", "Expo", "Redux", "Node.js", "Next.js", "GIT", "GitHub", "Firebase", "SQL", "SQLite", "MongoDB", "Rest API", "Genexus"]
+    const techs = ["HTML", "CSS", "Bootstrap", "Javascript", "React.js", "React Native", "Expo", "Redux", "Node.js", "GIT", "GitHub", "Firebase", "SQL", "SQLite", "MongoDB", "Rest API", "Genexus"]
 
     return (
         <>
