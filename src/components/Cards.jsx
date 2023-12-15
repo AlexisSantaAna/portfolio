@@ -38,7 +38,7 @@ const proyectos = [
     },
     {
         nombre: "Cinelista",
-        url: "https://cinelista.com.ar/",
+        url: "https://alexissantaana.github.io/cinelista/",
         github: "https://github.com/AlexisSantaAna/cinelista",
         info: "Guarda de forma sencilla aquellas películas que quieres ver y no tienes donde apuntarlas. Proyecto en HTML, CSS, Bootstrap y Vanilla JS.",
         img: "assets/pics/cl"
